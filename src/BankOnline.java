@@ -1,61 +1,14 @@
+import Exceptions.BankOnlineException;
+import Exceptions.BannedCardNumberTransferException;
+import Exceptions.InvalidCardNumberException;
+import Exceptions.LimitAmountTransferException;
+import Exceptions.NegativeAmountTransferException;
+import Exceptions.NullArgumentException;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
-
-class BankOnlineException extends Exception {
-    String message;
-
-    public BankOnlineException() {}
-
-    public BankOnlineException(String msg) {
-        this.message = msg;
-    }
-
-    public void getExceptionMessage() {
-        System.out.println("Ошибка: "+message);
-    }
-}
-
-class InvalidCardNumberException extends BankOnlineException {
-    InvalidCardNumberException() {}
-
-    InvalidCardNumberException(String msg) {
-        super(msg);
-    }
-}
-
-class BannedCardNumberTransferException extends BankOnlineException {
-    BannedCardNumberTransferException () {}
-
-    BannedCardNumberTransferException(String msg) {
-        super(msg);
-    }
-}
-
-class NegativeAmountTransferException extends BankOnlineException {
-    NegativeAmountTransferException() {}
-
-    NegativeAmountTransferException(String msg) {
-        super(msg);
-    }
-}
-
-class LimitAmountTransferException extends BankOnlineException {
-    LimitAmountTransferException() {}
-
-    LimitAmountTransferException(String msg) {
-        super(msg);
-    }
-}
-
-class NullArgumentException extends BankOnlineException {
-    NullArgumentException() {}
-
-    NullArgumentException(String msg) {
-        super(msg);
-    }
-}
 
 public class BankOnline{
 
